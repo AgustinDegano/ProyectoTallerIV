@@ -7,11 +7,11 @@ INSERT INTO ruta (id, ciudad_origen_id, ciudad_destino_id) VALUES (2, 2, 1);
 INSERT INTO ruta (id, ciudad_origen_id, ciudad_destino_id) VALUES (3, 2, 3);
 INSERT INTO ruta (id, ciudad_origen_id, ciudad_destino_id) VALUES (4, 3, 2);
 
-INSERT INTO empresa (id, nombre, telefono, direccion) VALUES (1, 'Nece', '03496-123456', 'Calle 1');
-INSERT INTO empresa (id, nombre, telefono, direccion) VALUES (2, 'Ruta 70', '03496-654321', 'Calle 2');
-INSERT INTO empresa (id, nombre, telefono, direccion) VALUES (3, 'Tata Rapido', '03496-987654', 'Calle 3');
-INSERT INTO empresa (id, nombre, telefono, direccion) VALUES (4, 'Micro', '03473-987654', 'Calle 3');
-INSERT INTO empresa (id, nombre, telefono, direccion) VALUES (5, 'El Norte', '03436-980154', 'Calle 3');
+INSERT INTO empresa (id, nombre, telefono, direccion) VALUES (1, 'Nece', '0342 455-8696', 'Belgrano 2910');
+INSERT INTO empresa (id, nombre, telefono, direccion) VALUES (2, 'Ruta 70', '0342 453-2521', ' Belgrano 2910');
+INSERT INTO empresa (id, nombre, telefono, direccion) VALUES (3, 'Tata Rapido', '0341 439-5461', 'San Lorenzo 2972');
+INSERT INTO empresa (id, nombre, telefono, direccion) VALUES (4, 'Micro', '0341 439-4131', 'Cafferata 702');
+
 
 INSERT INTO horarios (id, hora_salida, hora_llegada, ruta_id, empresa_id) VALUES
                                                                               (1, '05:20', '06:40', 1, 2),
@@ -79,7 +79,16 @@ INSERT INTO horarios (id, hora_salida, hora_llegada, ruta_id, empresa_id) VALUES
                                                                               (63, '14:20', '16:40', 3, 3),
                                                                               (64, '15:50', '18:10', 3, 3),
                                                                               (65, '17:40', '20:00', 3, 3),
-                                                                              (66, '19:10', '21:30', 3, 3);
+                                                                              (66, '19:10', '21:30', 3, 3),
+                                                                              (67, '07:30', '09:50', 3, 4),
+                                                                              (68, '09:10', '11:30', 3, 4),
+                                                                              (69, '12:50', '15:10', 3, 4),
+                                                                              (70, '20:10', '22:30', 3, 4),
+                                                                              (71, '06:00', '08:20', 4, 4),
+                                                                              (72, '09:00', '11:20', 4, 4),
+                                                                              (73, '15:00', '17:20', 4, 4),
+                                                                              (74, '17:00', '19:20', 4, 4),
+
 
 
 INSERT INTO rol (id, nombre) VALUES (1, 'ADMIN');
