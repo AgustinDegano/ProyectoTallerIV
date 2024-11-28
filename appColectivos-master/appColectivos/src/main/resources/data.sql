@@ -87,12 +87,12 @@ INSERT INTO horarios (id, hora_salida, hora_llegada, ruta_id, empresa_id) VALUES
                                                                               (71, '06:00', '08:20', 4, 4),
                                                                               (72, '09:00', '11:20', 4, 4),
                                                                               (73, '15:00', '17:20', 4, 4),
-                                                                              (74, '17:00', '19:20', 4, 4),
+                                                                              (74, '17:00', '19:20', 4, 4);
 
 
 
 INSERT INTO rol (id, nombre) VALUES (1, 'ADMIN');
 INSERT INTO rol (id, nombre) VALUES (2, 'USER');
 
-INSERT INTO usuario (id, nombre, rol_id) VALUES (1, 'admin', 1);
-INSERT INTO usuario (id, nombre, rol_id) VALUES (2, 'user', 2);
+INSERT INTO usuario (id, nombre, mail, password, rol_id) VALUES (1, 'admin', 'admin@test.com', '1234', 1);
+INSERT INTO usuario (id, nombre, mail, password, rol_id) VALUES (2, 'user', 'user@test.com', '1234', 2);

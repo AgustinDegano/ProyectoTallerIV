@@ -3,13 +3,11 @@ package com.example.appColectivos.service;
 import com.example.appColectivos.domain.Horarios;
 import com.example.appColectivos.domain.Ruta;
 import com.example.appColectivos.repository.HorariosRepository;
-import com.example.appColectivos.repository.RutaRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Service
 public class HorariosService {
@@ -22,7 +20,7 @@ public class HorariosService {
     }
 
     public List<Horarios> getHorarios(){
-            return horariosRepository.findAll();
+        return horariosRepository.findAll();
     }
 
     public Horarios getHorario(Long id){
