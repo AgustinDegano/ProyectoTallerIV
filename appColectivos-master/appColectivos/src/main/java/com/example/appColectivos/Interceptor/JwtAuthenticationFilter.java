@@ -1,4 +1,4 @@
-package com.example.appColectivos.interceptor;
+package com.example.appColectivos.Interceptor;
 
 import com.example.appColectivos.service.JwtService;
 import jakarta.servlet.FilterChain;
