@@ -32,8 +32,10 @@ public class SecurityConfiguration {
                 .requestMatchers("/auth/**",
                         "/v3/api-docs/**",         // Permitir Swagger API docs
                         "/swagger-ui/**",
-                        "/empresas",
-                        "/h2-console/**"
+                        "/empresas/**",
+                        "/h2-console/**",
+                        "/ping",
+                        "/horarios/**"
                 )
                 .permitAll()
                 .anyRequest()

@@ -94,5 +94,5 @@ INSERT INTO horarios (id, hora_salida, hora_llegada, ruta_id, empresa_id) VALUES
 INSERT INTO rol (id, nombre) VALUES (1, 'ADMIN');
 INSERT INTO rol (id, nombre) VALUES (2, 'USER');
 
-INSERT INTO usuario (id, nombre, mail, password, rol_id) VALUES (100, 'admin', 'admin@test.com', '1234', 1);
-INSERT INTO usuario (id, nombre, mail, password, rol_id) VALUES (200, 'user', 'user@test.com', '1234', 2);
+INSERT INTO usuario (id, nombre, mail, password, rol_id) VALUES (100, 'admin', 'admin@test.com', '$2a$12$hhQaacZml4.irg.dsl7bg.q9w9iwxPIesvd3x4RH6m1Z6RKFrYg0G', 1);
+INSERT INTO usuario (id, nombre, mail, password, rol_id) VALUES (200, 'user', 'user@test.com', '$2a$12$hhQaacZml4.irg.dsl7bg.q9w9iwxPIesvd3x4RH6m1Z6RKFrYg0G', 2);
