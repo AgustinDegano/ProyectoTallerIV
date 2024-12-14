@@ -33,7 +33,9 @@ public class SecurityConfiguration {
                         "/v3/api-docs/**",         // Permitir Swagger API docs
                         "/swagger-ui/**",
                         "/empresas",
-                        "/h2-console/**"
+                        "/h2-console/**",
+                        "/ping",
+                        "/horarios/**"
                 )
                 .permitAll()
                 .anyRequest()

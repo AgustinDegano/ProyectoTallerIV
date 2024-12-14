@@ -1,6 +1,7 @@
 package com.example.appColectivos.controller;
 
 import com.example.appColectivos.domain.Usuario;
+import com.example.appColectivos.dto.LoginResponseDto;
 import com.example.appColectivos.service.AuthService;
 import com.example.appColectivos.service.JwtService;
 import org.springframework.http.ResponseEntity;
@@ -27,9 +28,9 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody Usuario usuario) {
+    public ResponseEntity<LoginResponseDto> login(@RequestBody Usuario usuario) {
         Usuario authenticatedUser = authService.authenticateUser(usuario);
         String token = jwtService.generateToken(authenticatedUser);
-        return ResponseEntity.ok(token);
+        return ResponseEntity.ok(new LoginResponseDto(token));
     }
 }
