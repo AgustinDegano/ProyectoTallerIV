@@ -2,11 +2,13 @@ package com.example.appColectivos.controller;
 
 import com.example.appColectivos.domain.Empresa;
 import com.example.appColectivos.service.EmpresaService;
+import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity; // Importar ResponseEntity
 import org.springframework.http.HttpStatus;    // Importar HttpStatus
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Observable;
 
 @RestController
 @RequestMapping("empresas")
@@ -37,6 +39,12 @@ public class EmpresaController {
     public ResponseEntity<Void> deleteEmpresa(@PathVariable Long id) {
         empresaService.deleteEmpresa(id);
         return ResponseEntity.noContent().build();
+    }
+    // Crear una empresa
+    @PostMapping()
+    public ResponseEntity<Empresa> createEmpresa(@RequestBody Empresa nuevaEmpresa) {
+        Empresa createdEmpresa = empresaService.createEmpresa(nuevaEmpresa);
+        return ResponseEntity.ok(createdEmpresa);
     }
 }
 

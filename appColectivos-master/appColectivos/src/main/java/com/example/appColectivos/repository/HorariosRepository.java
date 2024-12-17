@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface HorariosRepository extends JpaRepository<Horarios, Long> {
     List<Horarios> findAllByRutaIdAndHoraSalidaGreaterThanEqualAndHoraLlegadaLessThanEqual(Long ruta_id, LocalTime horaSalida, LocalTime horaLlegada);
+    void deleteAllByEmpresaId(Long empresa_id);
 }

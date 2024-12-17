@@ -2,7 +2,9 @@ package com.example.appColectivos.service;
 
 import com.example.appColectivos.domain.Empresa;
 import com.example.appColectivos.repository.EmpresaRepository;
+import com.example.appColectivos.repository.HorariosRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,9 +12,12 @@ import java.util.Optional;
 @Service
 public class EmpresaService {
     private final EmpresaRepository empresaRepository;
+    private final HorariosRepository horariosRepository;
 
-    public EmpresaService(EmpresaRepository empresaRepository) {
+
+    public EmpresaService(EmpresaRepository empresaRepository, HorariosRepository horariosRepository) {
         this.empresaRepository = empresaRepository;
+        this.horariosRepository = horariosRepository;
     }
 
     // Obtener todas las empresas
@@ -40,14 +45,20 @@ public class EmpresaService {
     }
 
     // Lógica de servicio para eliminar empresa
+    @Transactional
     public void deleteEmpresa(Long id) {
         // Verificar si existe la empresa
         if (empresaRepository.existsById(id)) {
+            horariosRepository.deleteAllByEmpresaId(id);
             empresaRepository.deleteById(id);
         } else {
             throw new RuntimeException("Empresa no encontrada con ID: " + id);
         }
+    }
 
+    // Lógica para crear una nueva empresa
 
+    public Empresa createEmpresa(Empresa nuevaEmpresa) {
+        return empresaRepository.save(nuevaEmpresa);
     }
 }
